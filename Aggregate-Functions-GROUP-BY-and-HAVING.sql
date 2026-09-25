@@ -181,3 +181,13 @@ FROM products;
 -- Result:
 -- total_inventory_units
 -- 320
+
+
+-- Example 18 — Total Order Amounts
+-- GOAL: Find total sales volume recorded in orders.
+SELECT SUM(total_amount) AS lifetime_sales
+FROM orders;
+
+-- Result:
+-- lifetime_sales
+-- 99.00
