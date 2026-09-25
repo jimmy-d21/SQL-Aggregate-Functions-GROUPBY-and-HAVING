@@ -386,3 +386,17 @@ GROUP BY category;
 -- Pizza    | 13.00
 -- Drinks   | 3.00
 -- Dessert  | 6.00
+
+
+-- Example 35 — MAX() with GROUP BY
+-- GOAL: Find the most expensive product price in each category.
+SELECT category, MAX(price) AS max_category_price
+FROM products
+GROUP BY category;
+
+-- Result:
+-- category | max_category_price
+-- Burger   | 12.00
+-- Pizza    | 15.00
+-- Drinks   | 4.00
+-- Dessert  | 6.00
