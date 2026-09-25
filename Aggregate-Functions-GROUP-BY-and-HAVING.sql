@@ -514,3 +514,16 @@ HAVING MIN(price) >= 5.00;
 -- Burger   | 10.00
 -- Pizza    | 13.00
 -- Dessert  | 6.00
+
+
+-- Example 44 — HAVING with MAX()
+-- GOAL: Find categories where the maximum product price is under $10.00.
+SELECT category, MAX(price) AS max_price
+FROM products
+GROUP BY category
+HAVING MAX(price) < 10.00;
+
+-- Result:
+-- category | max_price
+-- Drinks   | 4.00
+-- Dessert  | 6.00
