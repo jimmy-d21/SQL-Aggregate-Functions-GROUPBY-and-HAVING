@@ -66,3 +66,16 @@ FROM orders;
 -- Result:
 -- highest_order_amount
 -- 30.00
+
+
+-- Example 8 — Comparing COUNT(*), COUNT(column), and COUNT(DISTINCT)
+-- GOAL: Demonstrate how COUNT(*), COUNT(stock), and COUNT(DISTINCT stock) behave on columns with NULLs and duplicates.
+SELECT 
+    COUNT(*) AS total_rows,
+    COUNT(stock) AS non_null_stock_count,
+    COUNT(DISTINCT stock) AS unique_stock_values
+FROM products;
+
+-- Result:
+-- total_rows | non_null_stock_count | unique_stock_values
+-- 8          | 7                    | 7
