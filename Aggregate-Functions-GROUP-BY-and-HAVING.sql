@@ -79,3 +79,16 @@ FROM products;
 -- Result:
 -- total_rows | non_null_stock_count | unique_stock_values
 -- 8          | 7                    | 7
+
+
+-- Example 9 — Demonstrating AVG() Handling of NULL Values
+-- GOAL: Show how AVG() ignores NULL rather than treating it as 0.
+SELECT 
+    SUM(stock) AS total_items,
+    COUNT(stock) AS counted_rows,
+    AVG(stock) AS average_stock
+FROM products;
+
+-- Result:
+-- total_items | counted_rows | average_stock
+-- 320         | 7            | 45.7142857142857143
