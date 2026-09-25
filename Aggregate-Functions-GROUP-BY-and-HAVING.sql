@@ -150,3 +150,13 @@ WHERE status = 'completed';
 -- Result:
 -- completed_orders
 -- 3
+
+
+-- Example 15 — Count Distinct Customer IDs in Orders
+-- GOAL: Determine how many unique customers have placed at least one order.
+SELECT COUNT(DISTINCT customer_id) AS active_customers
+FROM orders;
+
+-- Result:
+-- active_customers
+-- 4
