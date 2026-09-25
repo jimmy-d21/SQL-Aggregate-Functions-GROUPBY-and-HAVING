@@ -315,3 +315,18 @@ GROUP BY status;
 -- completed
 -- pending
 -- cancelled
+
+
+-- Example 30 — Grouping Products by Category
+-- GOAL: Group products by category and display category names.
+SELECT category
+FROM products
+GROUP BY category
+ORDER BY category;
+
+-- Result:
+-- category
+-- Burger
+-- Dessert
+-- Drinks
+-- Pizza
