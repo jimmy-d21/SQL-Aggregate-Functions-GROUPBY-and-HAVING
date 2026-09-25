@@ -287,3 +287,18 @@ WHERE status = 'completed';
 -- Result:
 -- max_completed_order
 -- 25.00
+
+
+-- Part 5 — GROUP BY (Examples 28–38)
+-- Example 28 — What GROUP BY Means
+-- GOAL: Group product records by category to see unique category names.
+SELECT category
+FROM products
+GROUP BY category;
+
+-- Result:
+-- category
+-- Burger
+-- Pizza
+-- Drinks
+-- Dessert
