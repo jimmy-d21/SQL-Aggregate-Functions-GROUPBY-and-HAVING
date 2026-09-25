@@ -500,3 +500,17 @@ HAVING AVG(price) > 10.00;
 -- category | avg_price
 -- Burger   | 11.0000000000000000
 -- Pizza    | 14.0000000000000000
+
+
+-- Example 43 — HAVING with MIN()
+-- GOAL: Find categories where even the cheapest product costs at least $5.00.
+SELECT category, MIN(price) AS min_price
+FROM products
+GROUP BY category
+HAVING MIN(price) >= 5.00;
+
+-- Result:
+-- category | min_price
+-- Burger   | 10.00
+-- Pizza    | 13.00
+-- Dessert  | 6.00
