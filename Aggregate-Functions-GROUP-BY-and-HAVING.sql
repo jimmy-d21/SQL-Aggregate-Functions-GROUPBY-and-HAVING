@@ -213,3 +213,14 @@ WHERE price > 10.00;
 -- Result:
 -- premium_item_stock
 -- 90
+
+
+-- Part 4 — AVG(), MIN(), and MAX() (Examples 21–27)
+-- Example 21 — Average Product Price
+-- GOAL: Calculate the overall average price of menu products.
+SELECT AVG(price) AS overall_avg_price
+FROM products;
+
+-- Result:
+-- overall_avg_price
+-- 9.2500000000000000
