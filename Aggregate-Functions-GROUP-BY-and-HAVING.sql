@@ -416,3 +416,17 @@ ORDER BY created_at;
 -- 2026-03-02 | cancelled | 1
 -- 2026-03-03 | completed | 1
 -- 2026-03-03 | pending   | 1
+
+
+-- Example 37 — GROUP BY with WHERE Clause
+-- GOAL: Count active products (stock > 0) grouped by category.
+SELECT category, COUNT(*) AS in_stock_product_count
+FROM products
+WHERE stock > 0
+GROUP BY category;
+
+-- Result:
+-- category | in_stock_product_count
+-- Burger   | 2
+-- Pizza    | 2
+-- Drinks   | 2
