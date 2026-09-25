@@ -527,3 +527,16 @@ HAVING MAX(price) < 10.00;
 -- category | max_price
 -- Drinks   | 4.00
 -- Dessert  | 6.00
+
+
+-- Example 45 — Demonstrating WHERE vs HAVING in a Single Query
+-- GOAL: Find categories with an average price above $10.00, considering only items priced over $10.00.
+SELECT category, AVG(price) AS avg_price
+FROM products
+WHERE price > 10.00
+GROUP BY category
+HAVING AVG(price) >= 12.00;
+
+-- Result:
+-- category | avg_price
+-- Pizza    | 14.0000000000000000
