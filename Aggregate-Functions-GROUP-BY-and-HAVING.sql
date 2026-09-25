@@ -160,3 +160,14 @@ FROM orders;
 -- Result:
 -- active_customers
 -- 4
+
+
+-- Part 3 — SUM() (Examples 16–20)
+-- Example 16 — Total Product Prices
+-- GOAL: Calculate the combined sum of listing prices for all menu items.
+SELECT SUM(price) AS sum_of_all_prices
+FROM products;
+
+-- Result:
+-- sum_of_all_prices
+-- 74.00
