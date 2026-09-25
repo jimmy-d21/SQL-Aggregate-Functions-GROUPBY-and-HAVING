@@ -475,3 +475,15 @@ HAVING COUNT(*) > 1;
 -- Result:
 -- customer_id | order_count
 -- 1           | 2
+
+
+-- Example 41 — HAVING with SUM()
+-- GOAL: Find categories whose total stock inventory exceeds 100 units.
+SELECT category, SUM(stock) AS total_stock
+FROM products
+GROUP BY category
+HAVING SUM(stock) > 100;
+
+-- Result:
+-- category | total_stock
+-- Drinks   | 180
