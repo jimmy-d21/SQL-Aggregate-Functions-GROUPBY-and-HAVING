@@ -400,3 +400,19 @@ GROUP BY category;
 -- Pizza    | 15.00
 -- Drinks   | 4.00
 -- Dessert  | 6.00
+
+
+-- Example 36 — GROUP BY Multiple Columns
+-- GOAL: Group orders by created date and order status.
+SELECT created_at, status, COUNT(*) AS order_count
+FROM orders
+GROUP BY created_at, status
+ORDER BY created_at;
+
+-- Result:
+-- created_at | status    | order_count
+-- 2026-03-01 | completed | 2
+-- 2026-03-02 | pending   | 1
+-- 2026-03-02 | cancelled | 1
+-- 2026-03-03 | completed | 1
+-- 2026-03-03 | pending   | 1
