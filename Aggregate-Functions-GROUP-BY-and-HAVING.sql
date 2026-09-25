@@ -16,3 +16,13 @@ FROM customers;
 -- Result:
 -- customers_with_email
 -- 4
+
+
+-- Example 3 — Count Unique Values with COUNT(DISTINCT column)
+-- GOAL: Count how many unique product categories exist in the products table.
+SELECT COUNT(DISTINCT category) AS unique_categories
+FROM products;
+
+-- Result:
+-- unique_categories
+-- 4
