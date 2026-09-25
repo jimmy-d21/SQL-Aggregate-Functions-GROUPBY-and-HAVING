@@ -610,3 +610,17 @@ ORDER BY total_revenue DESC;
 -- completed | 3            | 47.00         | 15.67
 -- cancelled | 1            | 30.00         | 30.00
 -- pending   | 2            | 22.00         | 11.00
+
+
+-- Example 50 — Executive Restaurant Overview Dashboard Query
+-- GOAL: Calculate key overall metrics for the restaurant in a single row query.
+SELECT 
+    COUNT(*) AS total_orders,
+    SUM(CASE WHEN status = 'completed' THEN total_amount ELSE 0 END) AS total_completed_revenue,
+    ROUND(AVG(total_amount), 2) AS overall_avg_order_value,
+    MAX(total_amount) AS largest_single_order
+FROM orders;
+
+-- Result:
+-- total_orders | total_completed_revenue | overall_avg_order_value | largest_single_order
+-- 6            | 47.00                   | 16.50                   | 30.00
