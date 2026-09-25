@@ -449,3 +449,16 @@ GROUP BY category;
 -- Pizza    | 2           | 13.00     | 15.00     | 14.0000000000000000
 -- Drinks   | 2           | 3.00      | 4.00      | 3.5000000000000000
 -- Dessert  | 1           | 6.00      | 6.00      | 6.0000000000000000
+
+
+-- Part 6 — HAVING (Examples 39–45)
+-- Example 39 — Understanding HAVING
+-- GOAL: Find categories that contain more than 2 products.
+SELECT category, COUNT(*) AS product_count
+FROM products
+GROUP BY category
+HAVING COUNT(*) > 2;
+
+-- Result:
+-- category | product_count
+-- Burger   | 3
