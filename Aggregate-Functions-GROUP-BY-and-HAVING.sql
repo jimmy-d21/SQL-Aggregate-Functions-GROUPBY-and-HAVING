@@ -191,3 +191,14 @@ FROM orders;
 -- Result:
 -- lifetime_sales
 -- 99.00
+
+
+-- Example 19 — SUM() with WHERE Clause
+-- GOAL: Calculate sales revenue from completed orders only.
+SELECT SUM(total_amount) AS completed_sales
+FROM orders
+WHERE status = 'completed';
+
+-- Result:
+-- completed_sales
+-- 47.00
