@@ -462,3 +462,16 @@ HAVING COUNT(*) > 2;
 -- Result:
 -- category | product_count
 -- Burger   | 3
+
+
+-- Example 40 — HAVING with COUNT()
+-- GOAL: Find customer IDs who have placed more than 1 order.
+SELECT customer_id, COUNT(*) AS order_count
+FROM orders
+WHERE customer_id IS NOT NULL
+GROUP BY customer_id
+HAVING COUNT(*) > 1;
+
+-- Result:
+-- customer_id | order_count
+-- 1           | 2
