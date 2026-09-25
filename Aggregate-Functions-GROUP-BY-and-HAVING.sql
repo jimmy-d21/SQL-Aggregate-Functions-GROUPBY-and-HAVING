@@ -592,3 +592,21 @@ ORDER BY avg_price DESC;
 -- Burger   | 11.00     | 2.00
 -- Dessert  | 6.00      | 0.00
 -- Drinks   | 3.50      | 1.00
+
+
+-- Example 49 — Sales Summary by Order Status
+-- GOAL: Report order counts, total revenue, and average revenue by order status.
+SELECT 
+    status,
+    COUNT(*) AS total_orders,
+    SUM(total_amount) AS total_revenue,
+    ROUND(AVG(total_amount), 2) AS avg_order_value
+FROM orders
+GROUP BY status
+ORDER BY total_revenue DESC;
+
+-- Result:
+-- status    | total_orders | total_revenue | avg_order_value
+-- completed | 3            | 47.00         | 15.67
+-- cancelled | 1            | 30.00         | 30.00
+-- pending   | 2            | 22.00         | 11.00
