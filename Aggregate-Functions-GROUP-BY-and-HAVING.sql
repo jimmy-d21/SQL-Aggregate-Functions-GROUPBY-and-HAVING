@@ -118,3 +118,13 @@ FROM customers;
 -- Result:
 -- total_registered_customers
 -- 5
+
+
+-- Example 12 — Count All Products
+-- GOAL: Find the size of your product menu.
+SELECT COUNT(*) AS total_products
+FROM products;
+
+-- Result:
+-- total_products
+-- 8
