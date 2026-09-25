@@ -26,3 +26,13 @@ FROM products;
 -- Result:
 -- unique_categories
 -- 4
+
+
+-- Example 4 — Summing Numerical Values with SUM()
+-- GOAL: Calculate the total revenue generated across all recorded orders.
+SELECT SUM(total_amount) AS total_revenue
+FROM orders;
+
+-- Result:
+-- total_revenue
+-- 99.00
