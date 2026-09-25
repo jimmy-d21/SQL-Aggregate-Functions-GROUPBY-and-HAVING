@@ -107,3 +107,14 @@ FROM products;
 -- Result:
 -- total_products | min_price | max_price | avg_price          | total_stock
 -- 8              | 3.00      | 15.00     | 9.2500000000000000 | 320
+
+
+-- Part 2 — COUNT() in Practice (Examples 11–15)
+-- Example 11 — Count All Customers
+-- GOAL: Count total customer entries.
+SELECT COUNT(*) AS total_registered_customers
+FROM customers;
+
+-- Result:
+-- total_registered_customers
+-- 5
