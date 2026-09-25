@@ -244,3 +244,13 @@ FROM products;
 -- Result:
 -- min_price
 -- 3.00
+
+
+-- Example 24 — Maximum Product Price
+-- GOAL: Find the highest single product price.
+SELECT MAX(price) AS max_price
+FROM products;
+
+-- Result:
+-- max_price
+-- 15.00
