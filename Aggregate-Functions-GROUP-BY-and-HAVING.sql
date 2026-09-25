@@ -202,3 +202,14 @@ WHERE status = 'completed';
 -- Result:
 -- completed_sales
 -- 47.00
+
+
+-- Example 20 — SUM() with Numeric Range Conditions
+-- GOAL: Find total stock of premium items (priced above $10.00).
+SELECT SUM(stock) AS premium_item_stock
+FROM products
+WHERE price > 10.00;
+
+-- Result:
+-- premium_item_stock
+-- 90
