@@ -46,3 +46,13 @@ FROM products;
 -- Result:
 -- average_product_price
 -- 9.2500000000000000
+
+
+-- Example 6 — Finding Minimum Values with MIN()
+-- GOAL: Find the lowest product price in the menu.
+SELECT MIN(price) AS cheapest_price
+FROM products;
+
+-- Result:
+-- cheapest_price
+-- 3.00
