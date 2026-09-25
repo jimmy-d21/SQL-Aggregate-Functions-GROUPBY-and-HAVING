@@ -372,3 +372,17 @@ GROUP BY category;
 -- Pizza    | 14.0000000000000000
 -- Drinks   | 3.5000000000000000
 -- Dessert  | 6.0000000000000000
+
+
+-- Example 34 — MIN() with GROUP BY
+-- GOAL: Find the cheapest item price in each category.
+SELECT category, MIN(price) AS min_category_price
+FROM products
+GROUP BY category;
+
+-- Result:
+-- category | min_category_price
+-- Burger   | 10.00
+-- Pizza    | 13.00
+-- Drinks   | 3.00
+-- Dessert  | 6.00
