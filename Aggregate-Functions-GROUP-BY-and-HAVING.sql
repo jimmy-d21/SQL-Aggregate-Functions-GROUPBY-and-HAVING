@@ -224,3 +224,13 @@ FROM products;
 -- Result:
 -- overall_avg_price
 -- 9.2500000000000000
+
+
+-- Example 22 — Average Order Amount
+-- GOAL: Determine average order size across all orders.
+SELECT AVG(total_amount) AS average_order_value
+FROM orders;
+
+-- Result:
+-- average_order_value
+-- 16.5000000000000000
