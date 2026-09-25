@@ -487,3 +487,16 @@ HAVING SUM(stock) > 100;
 -- Result:
 -- category | total_stock
 -- Drinks   | 180
+
+
+-- Example 42 — HAVING with AVG()
+-- GOAL: Find categories with an average product price strictly greater than $10.00.
+SELECT category, AVG(price) AS avg_price
+FROM products
+GROUP BY category
+HAVING AVG(price) > 10.00;
+
+-- Result:
+-- category | avg_price
+-- Burger   | 11.0000000000000000
+-- Pizza    | 14.0000000000000000
