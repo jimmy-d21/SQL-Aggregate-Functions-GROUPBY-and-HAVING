@@ -330,3 +330,17 @@ ORDER BY category;
 -- Dessert
 -- Drinks
 -- Pizza
+
+
+-- Example 31 — COUNT() with GROUP BY
+-- GOAL: Count the number of products in each category.
+SELECT category, COUNT(*) AS product_count
+FROM products
+GROUP BY category;
+
+-- Result:
+-- category | product_count
+-- Burger   | 3
+-- Pizza    | 2
+-- Drinks   | 2
+-- Dessert  | 1
