@@ -234,3 +234,13 @@ FROM orders;
 -- Result:
 -- average_order_value
 -- 16.5000000000000000
+
+
+-- Example 23 — Minimum Product Price
+-- GOAL: Find the lowest item price on the menu.
+SELECT MIN(price) AS min_price
+FROM products;
+
+-- Result:
+-- min_price
+-- 3.00
