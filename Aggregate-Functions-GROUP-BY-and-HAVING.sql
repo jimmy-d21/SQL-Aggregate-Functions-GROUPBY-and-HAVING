@@ -171,3 +171,13 @@ FROM products;
 -- Result:
 -- sum_of_all_prices
 -- 74.00
+
+
+-- Example 17 — Total Stock Quantity
+-- GOAL: Find total item units available in stock across all products.
+SELECT SUM(stock) AS total_inventory_units
+FROM products;
+
+-- Result:
+-- total_inventory_units
+-- 320
