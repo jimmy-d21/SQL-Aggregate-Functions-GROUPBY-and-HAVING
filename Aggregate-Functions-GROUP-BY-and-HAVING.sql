@@ -1,3 +1,43 @@
+--- LIST OF AGGREGATE ---
+[x] Understand aggregate functions
+
+[x] COUNT()
+
+[x] COUNT(*)
+
+[x] COUNT(column)
+
+[x] COUNT(DISTINCT)
+
+[x] SUM()
+
+[x] AVG()
+
+[x] MIN()
+
+[x] MAX()
+
+[x] Understand NULL with aggregates
+
+[x] GROUP BY
+
+[x] GROUP BY one column
+
+[x] GROUP BY multiple columns
+
+[x] WHERE with GROUP BY
+
+[x] HAVING
+
+[x] WHERE vs HAVING
+
+[x] Aggregate functions with GROUP BY
+
+[x] Basic reporting queries
+
+[x] SQL query processing order
+
+
 -- Example 1 — Count All Rows with COUNT(*)
 -- GOAL: Example 1 — Count All Rows with COUNT(*)
 SELECT COUNT(*) AS total_customers
