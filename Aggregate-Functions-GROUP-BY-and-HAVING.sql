@@ -92,3 +92,18 @@ FROM products;
 -- Result:
 -- total_items | counted_rows | average_stock
 -- 320         | 7            | 45.7142857142857143
+
+
+-- Example 10 — Combining Multiple Aggregate Functions
+-- GOAL: Generate a single summary row for product inventory metrics.
+SELECT 
+    COUNT(*) AS total_products,
+    MIN(price) AS min_price,
+    MAX(price) AS max_price,
+    AVG(price) AS avg_price,
+    SUM(stock) AS total_stock
+FROM products;
+
+-- Result:
+-- total_products | min_price | max_price | avg_price          | total_stock
+-- 8              | 3.00      | 15.00     | 9.2500000000000000 | 320
