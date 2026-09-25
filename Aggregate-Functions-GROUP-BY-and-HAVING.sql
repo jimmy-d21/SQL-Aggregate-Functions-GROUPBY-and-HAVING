@@ -56,3 +56,13 @@ FROM products;
 -- Result:
 -- cheapest_price
 -- 3.00
+
+
+-- Example 7 — Finding Maximum Values with MAX()
+-- GOAL: Find the highest total amount spent on a single order.
+SELECT MAX(total_amount) AS highest_order_amount
+FROM orders;
+
+-- Result:
+-- highest_order_amount
+-- 30.00
