@@ -276,3 +276,14 @@ WHERE category = 'Pizza';
 -- Result:
 -- cheapest_pizza
 -- 13.00
+
+
+-- Example 27 — MAX() with Date Conditions
+-- GOAL: Find the highest completed order total.
+SELECT MAX(total_amount) AS max_completed_order
+FROM orders
+WHERE status = 'completed';
+
+-- Result:
+-- max_completed_order
+-- 25.00
