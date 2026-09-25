@@ -265,3 +265,14 @@ WHERE stock > 0;
 -- Result:
 -- avg_stock_in_stock_items
 -- 53.3333333333333333
+
+
+-- Example 26 — MIN() with WHERE Filter
+-- GOAL: Find the cheapest pizza on the menu.
+SELECT MIN(price) AS cheapest_pizza
+FROM products
+WHERE category = 'Pizza';
+
+-- Result:
+-- cheapest_pizza
+-- 13.00
