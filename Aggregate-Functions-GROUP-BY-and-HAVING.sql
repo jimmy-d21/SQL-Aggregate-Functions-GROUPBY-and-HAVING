@@ -139,3 +139,14 @@ WHERE category = 'Burger';
 -- Result:
 -- burger_count
 -- 3
+
+
+-- Example 14 — Count Orders with a Specific Status
+-- GOAL: Count how many orders are currently marked as 'completed'.
+SELECT COUNT(*) AS completed_orders
+FROM orders
+WHERE status = 'completed';
+
+-- Result:
+-- completed_orders
+-- 3
