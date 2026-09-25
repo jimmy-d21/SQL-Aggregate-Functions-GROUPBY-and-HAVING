@@ -344,3 +344,17 @@ GROUP BY category;
 -- Pizza    | 2
 -- Drinks   | 2
 -- Dessert  | 1
+
+
+-- Example 32 — SUM() with GROUP BY
+-- GOAL: Calculate total inventory stock available per product category.
+SELECT category, SUM(stock) AS total_category_stock
+FROM products
+GROUP BY category;
+
+-- Result:
+-- category | total_category_stock
+-- Burger   | 90
+-- Pizza    | 50
+-- Drinks   | 180
+-- Dessert  | NULL
