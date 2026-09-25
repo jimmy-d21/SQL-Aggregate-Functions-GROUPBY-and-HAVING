@@ -540,3 +540,22 @@ HAVING AVG(price) >= 12.00;
 -- Result:
 -- category | avg_price
 -- Pizza    | 14.0000000000000000
+
+
+-- Part 7 — Practical Reporting Queries (Examples 46–50)
+-- Example 46 — Product Inventory Breakdown by Category
+-- GOAL: Produce a inventory summary listing categories, product counts, and total stock.
+SELECT 
+    category,
+    COUNT(*) AS total_products,
+    SUM(COALESCE(stock, 0)) AS total_stock
+FROM products
+GROUP BY category
+ORDER BY total_stock DESC;
+
+-- Result:
+-- category | total_products | total_stock
+-- Drinks   | 2              | 180
+-- Burger   | 3              | 90
+-- Pizza    | 2              | 50
+-- Dessert  | 1              | 0
