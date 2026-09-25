@@ -358,3 +358,17 @@ GROUP BY category;
 -- Pizza    | 50
 -- Drinks   | 180
 -- Dessert  | NULL
+
+
+-- Example 33 — AVG() with GROUP BY
+-- GOAL: Calculate average product price per category.
+SELECT category, AVG(price) AS avg_price
+FROM products
+GROUP BY category;
+
+-- Result:
+-- category | avg_price
+-- Burger   | 11.0000000000000000
+-- Pizza    | 14.0000000000000000
+-- Drinks   | 3.5000000000000000
+-- Dessert  | 6.0000000000000000
