@@ -254,3 +254,14 @@ FROM products;
 -- Result:
 -- max_price
 -- 15.00
+
+
+-- Example 25 — Average Stock for In-Stock Items
+-- GOAL: Find the average stock level, excluding items that are completely out of stock (stock = 0).
+SELECT AVG(stock) AS avg_stock_in_stock_items
+FROM products
+WHERE stock > 0;
+
+-- Result:
+-- avg_stock_in_stock_items
+-- 53.3333333333333333
