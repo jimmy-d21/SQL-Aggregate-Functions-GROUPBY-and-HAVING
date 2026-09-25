@@ -559,3 +559,18 @@ ORDER BY total_stock DESC;
 -- Burger   | 3              | 90
 -- Pizza    | 2              | 50
 -- Dessert  | 1              | 0
+
+
+-- Example 47 — Identify High-Volume Categories
+-- GOAL: Report categories that have at least 2 products with stock over 10 units.
+SELECT category, COUNT(*) AS qualifying_products
+FROM products
+WHERE stock > 10
+GROUP BY category
+HAVING COUNT(*) >= 2;
+
+-- Result:
+-- category | qualifying_products
+-- Burger   | 2
+-- Pizza    | 2
+-- Drinks   | 2
