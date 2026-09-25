@@ -128,3 +128,14 @@ FROM products;
 -- Result:
 -- total_products
 -- 8
+
+
+-- Example 13 — Count Products in a Category with WHERE
+-- GOAL: Count how many items are in the 'Burger' category.
+SELECT COUNT(*) AS burger_count
+FROM products
+WHERE category = 'Burger';
+
+-- Result:
+-- burger_count
+-- 3
