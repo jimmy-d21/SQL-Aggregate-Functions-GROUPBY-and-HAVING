@@ -302,3 +302,16 @@ GROUP BY category;
 -- Pizza
 -- Drinks
 -- Dessert
+
+
+-- Example 29 — Basic GROUP BY on One Column
+-- GOAL: List all unique order statuses present in the database.
+SELECT status
+FROM orders
+GROUP BY status;
+
+-- Result:
+-- status
+-- completed
+-- pending
+-- cancelled
