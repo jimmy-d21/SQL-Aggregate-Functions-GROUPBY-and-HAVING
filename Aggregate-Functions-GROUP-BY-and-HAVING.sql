@@ -36,3 +36,13 @@ FROM orders;
 -- Result:
 -- total_revenue
 -- 99.00
+
+
+-- Example 5 — Calculating Averages with AVG()
+-- GOAL: Calculate the average price of all products offered on the menu.
+SELECT AVG(price) AS average_product_price
+FROM products;
+
+-- Result:
+-- average_product_price
+-- 9.2500000000000000
