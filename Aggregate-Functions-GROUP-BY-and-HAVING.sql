@@ -430,3 +430,22 @@ GROUP BY category;
 -- Burger   | 2
 -- Pizza    | 2
 -- Drinks   | 2
+
+
+-- Example 38 — Combining Multiple Aggregates with GROUP BY
+-- GOAL: Generate a complete category metrics summary report.
+SELECT 
+    category,
+    COUNT(*) AS total_items,
+    MIN(price) AS min_price,
+    MAX(price) AS max_price,
+    AVG(price) AS avg_price
+FROM products
+GROUP BY category;
+
+-- Result:
+-- category | total_items | min_price | max_price | avg_price
+-- Burger   | 3           | 10.00     | 12.00     | 11.0000000000000000
+-- Pizza    | 2           | 13.00     | 15.00     | 14.0000000000000000
+-- Drinks   | 2           | 3.00      | 4.00      | 3.5000000000000000
+-- Dessert  | 1           | 6.00      | 6.00      | 6.0000000000000000
