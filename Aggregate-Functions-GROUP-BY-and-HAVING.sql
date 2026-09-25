@@ -574,3 +574,21 @@ HAVING COUNT(*) >= 2;
 -- Burger   | 2
 -- Pizza    | 2
 -- Drinks   | 2
+
+
+-- Example 48 — Pricing Analysis Report
+-- GOAL: Calculate price metrics per category formatted to 2 decimal places using ROUND().
+SELECT 
+    category,
+    ROUND(AVG(price), 2) AS avg_price,
+    ROUND(MAX(price) - MIN(price), 2) AS price_spread
+FROM products
+GROUP BY category
+ORDER BY avg_price DESC;
+
+-- Result:
+-- category | avg_price | price_spread
+-- Pizza    | 14.00     | 2.00
+-- Burger   | 11.00     | 2.00
+-- Dessert  | 6.00      | 0.00
+-- Drinks   | 3.50      | 1.00
